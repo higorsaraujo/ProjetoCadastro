@@ -14,5 +14,18 @@ CREATE TABLE usuario
     senha_usuario varchar(30) NOT NULL
 );
 
+-- INSERIR DADOS
+
+/*
+
+USE projeto1;
+ 
+-- ISNERIR DADOS
+
+INSERT INTO usuario (nome_usuario, fone_usuario, email_usuario, senha_usuario) values ('CASSIO', '(18)3622-9046','cassio@mail.com','1234');
+SELECT * FROM usuario;
+
+*/
+
 
 
