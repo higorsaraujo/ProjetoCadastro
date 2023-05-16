@@ -16,7 +16,6 @@
 
     $sql .= " VALUES ('".$nome."','".$email."','".$fone."','".$senha."')";
 
-    echo $sql."<br>";
     $result = mysqli_query($con,$sql);
     
     if($result)
@@ -25,3 +24,5 @@
             echo "Erro ao tentar cadastrar!";
 
 ?>
+
+<a href="index.php">Voltar</a>
