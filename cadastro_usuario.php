@@ -6,6 +6,21 @@
     $fone = $_POST['fone'];
     $senha = $_POST['senha'];
 
+    
+
+    
+    $sql = "SELECT email_usuario FROM usuario WHERE email_usuario = '$email'";
+        //mysqi_query => executa um comando no banco de dados
+        $result = mysqli_query($con,$sql);
+        // mysqli_fetch_array retorna apenas uma linha dos registros retornados
+        $row = mysqli_num_rows($result);
+    
+    
+    if($row > 0 ){
+        echo "Usuário já cadastrado";
+        exit();
+    }
+    
     echo "<h1>Dados do usuário: </h1>";
     echo "Nome: $nome <br>";
     echo "Email: $email <br>";
