@@ -20,16 +20,21 @@
     <table width="500" align="center" border="1">
         <tr> 
             <th>Código</th>
+            <th>Foto</th>
             <th>Nome</th>
             <th>E-mail</th>
             <th>Telefone</th>
             <th>Alterar</th>
             <th>Deletar</th>
+            <th>Alterar foto</th>
+            <th>Remover foto</th>
         </tr>
         <?php
             do{
                 echo "<tr>";
                     echo "<td>".$row['id_usuario']."</td>";
+                    if($row['foto'] == "") echo "<td></td>";
+                    else echo "<td><img src='".$row['foto']."' width='80' height='100'/></td>";
                     echo "<td>".$row['nome_usuario']."</td>";
                     echo "<td>".$row['email_usuario']."</td>";
                     echo "<td>".$row['fone_usuario']."</td>";
@@ -37,6 +42,7 @@
                             .$row['id_usuario']."'>Alterar</a></td>";
                     echo "<td><a href='deleta_usuario.php?id_usuario="
                     .$row['id_usuario']."'>Deletar</a></td>";
+                    echo "<td><a href='altera_foto.php?id_usuario=".$row['id_usuario']."'>Alterar foto</a></td>";
                 echo "</th>";
             } while($row = mysqli_fetch_array($result))
             

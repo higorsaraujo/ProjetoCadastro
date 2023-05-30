@@ -36,6 +36,10 @@
                 <label for="senha">Senha</label>
                 <input type="password" name="senha" id="senha" value="<?php echo $row['senha_usuario']?>">
             </div>
+            <div>
+                <label for="foto">Senha</label>
+                <input type="file" name="foto" id="foto" value="<?php echo $row['foto']?>">
+            </div>
             <input type="submit" value="Salvar">
     </form>
 </body>
