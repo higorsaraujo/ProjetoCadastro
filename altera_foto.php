@@ -3,7 +3,7 @@
     $id_usuario = $_GET ['id_usuario'];
     $sql = "SELECT foto FROM usuario WHERE id_usuario=$id_usuario";
     $result = mysqli_query($con,$sql);
-    $row = mysqli_fetch_array($result);
+    $row = mysqli_fetch_array($result);ghjghj
 ?>
 
 <!-- TESTAR CODIGO http://localhost/ProjetoCadastro/altera_usuario.php?id_usuario=2 -->
