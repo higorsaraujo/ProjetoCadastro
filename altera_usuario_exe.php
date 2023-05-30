@@ -1,11 +1,17 @@
 <?php
     include('conexao.php');
+
     $id_usuario = $_POST['id_usuario'];
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $fone = $_POST['fone'];
     $senha = $_POST['senha'];
-    $nome_foto = "";
+
+    //select imagem 
+
+    $sqlfoto = "SELECT foto FROM usuario WHERE id_usuario=$id_usuario";
+    $result = mysqli_query($con, $sqlfoto);
+    $nome_foto = $result;
     if(file_exists($_FILES['foto']['tmp_name'])){
     $pasta_destino = 'fotos/';
     $extensao = strtolower(substr($_FILES['foto']['name'],-4));
