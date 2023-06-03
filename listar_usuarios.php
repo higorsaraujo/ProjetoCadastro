@@ -26,7 +26,6 @@
             <th>Telefone</th>
             <th>Alterar</th>
             <th>Deletar</th>
-            <th>Alterar foto</th>
             <th>Remover foto</th>
         </tr>
         <?php
